@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Kingdom
-comment0.text=\r\n\ \ The\ main\ GameWindow\ of\ the\ gui.\r\n\ \ @author\ Apurva\ Acharya\r\n
-comment1.params=
-comment1.target=Kingdom()
-comment1.text=\r\n\ \ constructor\ method\ takes\ as\ input\ how\ many\ rows\ and\ columns\ of\ gridsquares\ to\ create\r\n\ \ it\ then\ creates\ the\ panels,\ their\ subcomponents\ and\ puts\ them\ all\ together\ in\ the\ main\ frame\r\n\ \ it\ makes\ sure\ that\ action\ listeners\ are\ added\ to\ selectable\ items\r\n\ \ it\ makes\ sure\ that\ the\ gui\ will\ be\ visible\r\n
-comment2.params=aevt
-comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
-numComments=3
