@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Kingdom
+comment0.text=\r\n\ \ The\ main\ GameWindow\ of\ the\ gui.\r\n\ \ \r\n
+comment1.params=playerMode\ humanPlayers\ computerPlayers\ playerOne\ playerTwo\ playerThree\ playerFour
+comment1.target=Kingdom(int,\ int,\ boolean,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ \ constructor\ method\ takes\ as\ input\ how\ many\ rows\ and\ columns\ of\ gridsquares\ to\ create\r\n\ \ it\ then\ creates\ the\ panels,\ their\ subcomponents\ and\ puts\ them\ all\ together\ in\ the\ main\ frame\r\n\ \ it\ makes\ sure\ that\ action\ listeners\ are\ added\ to\ selectable\ items\r\n\ \ it\ makes\ sure\ that\ the\ gui\ will\ be\ visible\r\n
+comment2.params=aevt
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment3.params=mevt
+comment3.target=void\ mouseClicked(java.awt.event.MouseEvent)
+comment4.params=arg0
+comment4.target=void\ mouseEntered(java.awt.event.MouseEvent)
+comment5.params=arg0
+comment5.target=void\ mouseExited(java.awt.event.MouseEvent)
+comment6.params=arg0
+comment6.target=void\ mousePressed(java.awt.event.MouseEvent)
+comment7.params=arg0
+comment7.target=void\ mouseReleased(java.awt.event.MouseEvent)
+numComments=8
