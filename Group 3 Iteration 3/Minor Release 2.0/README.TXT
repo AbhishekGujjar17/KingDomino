@@ -1,12 +1,17 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all they need to know. The comments should usually include at least:
-------------------------------------------------------------------------
+How to run from a shell window:
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+Open console (terminal, command.exe, whatever)
+
+Navigate to inside Minor Release 2.0 folder
+
+Compile the code:
+
+javac *.java
+
+Run the code:
+
+java Play
+
+Don't forget, if you edit the code then recompile it before running.
+
+->  (directly executing the jar file will run half only as it cannot accessed images folder but when compiled using a terminal it works fine).
