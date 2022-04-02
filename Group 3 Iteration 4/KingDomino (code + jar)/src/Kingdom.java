@@ -73,9 +73,9 @@ public class Kingdom extends JFrame implements Serializable, ActionListener, Mou
             for (int i = 1; i <= playerMode; i++) {tempKings.add(i);}
         }
 
-        currentStack = new TileStack(this);
+        currentStack = new TileStack(this, "Current");
         currentStack.setKings(tempKings);
-        futureStack = new TileStack(this);
+        futureStack = new TileStack(this, "Future");
 
         state = new GameScreenState(gameStep, playerMode, humanPlayers, colorMode, botPresent, playerOne, playerTwo, playerThree, playerFour, playerQueue, futureStack.isEmpty, availableTiles, currentStack.getkingQueue(), futureStack.getkingQueue());
 
@@ -206,12 +206,16 @@ public class Kingdom extends JFrame implements Serializable, ActionListener, Mou
         add(instructionLabel, BorderLayout.SOUTH);
         this.setJMenuBar(menu);
 
+
         // housekeeping : behaviour
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1400,900);
         setResizable(false);
         setVisible(true);
         setGameStep();
+        if (!fromMemory){
+            JOptionPane.showMessageDialog(this,"Each Player must select a grid where they want to place their starting tile","WELCOME TO GAME",JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Starting tile for a Robot Player is already selected","WELCOME TO GAME",JOptionPane.PLAIN_MESSAGE);}
         }
 
     public void loadGame(List<TileStack.StackSlot> currentStackState, List<TileStack.StackSlot> futureStackState, List<TerritoryState> territoryStates, GameScreenState gameScreenState){
@@ -335,7 +339,11 @@ public class Kingdom extends JFrame implements Serializable, ActionListener, Mou
                 if (futureStack.isEmpty && turnQueue.isEmpty()){declareWinner();}
                 this.gameStep = 5;
                 state.gameStep = gameStep;
+                System.out.println(turnQueue.get(0).getOwner());
+                System.out.println("\n");
                 for (PlayerTerritory territory: kingdoms) {
+                    System.out.println(territory.getPlayerName());
+                    System.out.println("-");
                     if (territory.getPlayerName().equals(turnQueue.get(0).getOwner()))
                     {
                         if (territory.isPlayPossible(turnQueue.get(0).getTileNumber())){placeTile();}
@@ -378,7 +386,9 @@ public class Kingdom extends JFrame implements Serializable, ActionListener, Mou
                 state.gameStep = gameStep;
             }
             case 7 -> {
+                System.out.println("shh");
                 if (!currentStack.isKingPresent()) {break;}
+                System.out.println("shh");
                 this.gameStep = 1;
                 state.gameStep = gameStep;
                 if (!availableTiles.isEmpty()){
@@ -422,8 +432,10 @@ public class Kingdom extends JFrame implements Serializable, ActionListener, Mou
     }
 
     public void setTerritoryTiles(){
+        System.out.println("jjj\n");
         for (PlayerTerritory territory: kingdoms) {
             if (territory.getPlayerName().equals(turnQueue.get(0).getOwner())) {
+                System.out.println("jjj\n");
                 territory.setActive(true);
                 territory.setCurrentSlot(turnQueue.get(0).tile.getNumber(), turnQueue.get(0).tile.getOrientation());
             }

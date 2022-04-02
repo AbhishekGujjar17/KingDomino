@@ -18,12 +18,12 @@ class TileStack extends JPanel implements MouseListener {
     private List<StackSlot> slotList = new ArrayList<>();
     public boolean isEmpty = true;
 
-    public TileStack(Kingdom parent) {
+    public TileStack(Kingdom parent, String a) {
         this.parent = parent;
         gbc.fill = GridBagConstraints.BOTH;
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
-        JLabel currentTileLabel= new JLabel("Current Domino Tiles");
+        JLabel currentTileLabel= new JLabel(" Domino Tiles");
         currentTileLabel.setForeground(Color.black);
 
         slots= new JPanel();
