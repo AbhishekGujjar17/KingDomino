@@ -1,1 +1,0 @@
-We have a Winner Screen that loads up when the game ends. As we are not playing the entire game, the Winner Screen doesn't load. We have uploaded a sample winner screen in the screenshot folder.
