@@ -88,7 +88,7 @@ public class ColourModes extends JFrame implements ActionListener, MouseListener
     }    
     
     private JButton setDeficiencyMode(){
-        deficiency = new JButton("Vision Deficiency");
+        deficiency = new JButton("Classic");
         deficiency.setFont(new Font("Serif", Font.BOLD, 37));
         deficiency.setBackground(Color.yellow);
         deficiency.setForeground(Color.black);
