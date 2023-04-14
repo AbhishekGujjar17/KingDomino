@@ -7,7 +7,7 @@ Java Development Kit (JDK) version 8 or higher
 IntelliJ IDEA or any other Java IDE
 
 # Installation
-Clone the repository using git clone https://github.com/yourusername/kingdomino-java-swing.git
+Clone the repository using git clone
 
 Open the project in your Java IDE
 
